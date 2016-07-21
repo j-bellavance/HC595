@@ -1,6 +1,5 @@
 # HC595
 //Constructor:
-
 HC595 ledArray(chipCount,latchPin,clockPin,dataPin);
 
 Available methods :
