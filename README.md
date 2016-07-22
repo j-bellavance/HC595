@@ -1,34 +1,16 @@
 # HC595
-//Constructor:
-HC595 ledArray(chipCount,latchPin,clockPin,dataPin);
+Easily switch on, off or toggle up to 64 pins using up to 8 x 74HC595 Shift Out Serial Registers
 
-Available methods :
- void isLeastSignificantBitFirst();            
- // Declare the type of output to the 74HC595 LSBFIRST
+See the datasheet at :
+--http://www.ti.com/lit/ds/symlink/sn74HC595.pdf
 
- void isMostSignificantBitFirst();             
- // Declare the type of output to the 74HC595 MSBFIRST (Default)
+For connections with an Arduino, see :
+--https://www.arduino.cc/en/Tutorial/ShiftOut
 
- void reset();                                 
- // Reset all 64 pins to zero
+Permet de contrôler jusqu'à 64 interrupeurs (ouvert, fermé, ou bascule) à l'aide de jusqu'à 8 x 74HC595.
 
- void setPin(int pin, int action);             
- // Set the value of a pin
- // - "action" can be : ON or HIGH, OFF or LOW, TOGGLE
+La fiche de données (en anglais) ici :
+--http://www.ti.com/lit/ds/symlink/sn74HC595.pdf
 
- void setPins(int from, int to, int action);   
- // Set the values of contigous pins
-
- void send();                                  
- // Sent the contents of the pins to the 74HC595
- // Send is always automaticaly called after :
- // setPin(), setPins() and reset()
-
- int getState(int pin);                        
- // Get the state of a particular pin
-
- String toString();                            
- // See the contents of all pins as a string of '0' or '1'
-
- int lastPin();                                
- // Pins are numbered from 0 to lastPin()
+Pour voir comment les connecter à un Arduino : 
+--http://www.zem.fr/decouverte-du-composant-74hc595-8-bit-shift-register/
